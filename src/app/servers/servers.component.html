@@ -1,0 +1,15 @@
+<label>Movie Name </label>
+<!-- <input type="text" class="form-control" (input)="onUpdateMovie($event)"> -->
+<input type="text" class="form-control" [(ngModel)]="movieName">
+<!-- <p>{{movieName}}</p> -->
+
+
+<button class="btn btn-primary" [disabled]=" movieName == '' " (click)="onCreateServer()">Add Movie </button>
+<!-- <p>{{allowNewServer}}</p> -->
+<!-- <p [innerText]="allowNewServer"></p> -->
+<!-- <p>{{serverCreationStatus}}</p> -->
+<!-- <p *ngIf="addMovie">{{serverCreationStatus}}</p> -->
+<p *ngIf="addMovie; else noMovie">{{serverCreationStatus}}</p>
+<ng-template #noMovie>No New Movie is here!</ng-template>
+<app-server></app-server>
+<app-server></app-server>
